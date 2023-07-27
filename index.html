@@ -8,12 +8,37 @@
 
         let guess = prompt("guess a number between 1 and 10");
 
-        if(num == guess)
-        {
-            alert("Got it!");
-        }else{
-            alert("Sorry!  You guessed " + guess + " and the number was " + num);
+        let gotIt = false;
+
+        let numGuesess = 0;
+
+        while(gotIt === false){
+            numGuesess++;
+            if(num == guess)
+            
+            {
+                //alert("Got it!");
+                gotIt = true;//break out of loop
+            }else{//Continue since answer is incorrect!
+
+                if(num > guess){//higher!
+                    guess = prompt("higher!");
+
+                }else{//lower!
+                    guess = prompt("lower!");
+                }
+
+                //guess = prompt("guess again!");
+            }
+
+
+
+
         }
+        
+        alert("Got It! You guessed " + numGuesess + "times!");
+        //alert("Sorry!  You guessed " + guess + " and the number was " + num);
+        
 
 	</script>
 </body>
